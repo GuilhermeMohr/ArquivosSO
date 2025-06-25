@@ -1,6 +1,8 @@
 #include "ArvoreVLI.h"
+#include "fcb.h"
 
 int main() {
+    
     ArvoreBinariaVLI arvore;
     inicializar(&arvore);
 
@@ -18,9 +20,11 @@ int main() {
         printf("\nAltura raiz: %d\n", no->altura);
 
     liberar(&arvore);
-    while (1) {
-        Sleep(1);
-    }
+    
+    Fcb fcb;
+    printf("Digite o tamanho: ");
+    scanf("%d", &fcb.tamanho);
+    printf("TAMANHO FCB: %d", fcb.tamanho);
 
     return 0;
 }
