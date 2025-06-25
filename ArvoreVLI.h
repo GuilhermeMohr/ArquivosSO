@@ -5,6 +5,11 @@
 #include <stdlib.h>
 #include <windows.h>
 
+typedef struct Diretorio {
+    
+    struct Diretorio* prox;
+} Dir;
+
 typedef struct No {
     int info;
     int altura;
