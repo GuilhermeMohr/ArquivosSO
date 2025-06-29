@@ -13,7 +13,7 @@ enum Tipo {
 };
 
 typedef struct Fcb {
-    char* nome;
+    char nome[100];
     int tamanho;
     enum Tipo tipo;
     time_t dataCriacao;
@@ -21,17 +21,16 @@ typedef struct Fcb {
     time_t dataAcesso;
     int id;
     int permissao;
+    char* conteudo;
+    struct Fcb* prox;
 } Fcb;
 
-typedef struct DiretorioTopo {
-    struct Fcb* arquivos;
-    struct Diretorio* filhos;
-} Dir;
-
 typedef struct Diretorio {
+    char nome[100];
     struct Fcb* arquivos;
     struct Diretorio* filhos;
     struct Diretorio* prox;
+    struct Diretorio* pai;
 } Dir;
 
 #endif
