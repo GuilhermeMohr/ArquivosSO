@@ -17,7 +17,7 @@ void loop_comandos() {
         else if (strcmp(comando, "ls") == 0) ls();
         else if (sscanf(comando, "touch %s", arg1) == 1) touch(arg1);
         else if (sscanf(comando, "cat %s", arg1) == 1) cat(arg1);
-        else if (sscanf(comando, "echo %s %[^"]", arg1, arg2) == 2) echo_simples(arg1, arg2);
+        else if (sscanf(comando, "echo %s %[^"]"", arg1, arg2) == 2) echo_simples(arg1, arg2);
         else if (sscanf(comando, "chmod %d %s", &((int){0}), arg1) == 2) chmod_simples(arg1, atoi(strtok(comando + 6, " ")));
         else if (sscanf(comando, "rm %s", arg1) == 1) rm(arg1);
         else if (sscanf(comando, "su %s", arg1) == 1) strcpy(usuarioAtual, arg1);
