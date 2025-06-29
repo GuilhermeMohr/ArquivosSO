@@ -3,6 +3,9 @@
 
 #include "utils.h"
 
+#include <stddef.h>
+#include <time.h>
+
 #define MAX_NOME 100
 #define MAX_CONTEUDO 1024
 
